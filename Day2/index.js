@@ -4,7 +4,8 @@ const express = require('express');
 const route = require('./src/route.js');
 // creating app instance
 const app = express();
-
+// this will allow your backend app to read frontend json data
+app.use(express.json());
 // app.use('/', async (req, res) => {
 //     res.send("Hey i am coming from backend")
 // })

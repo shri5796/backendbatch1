@@ -4,6 +4,7 @@ const express = require('express');
 const router = express.Router();
 // Home api
 router.get('/',(req,res)=>{
+    console.log(req.body)
     res.send("Hey i am coming from backend")
 })
 router.get('/india',(req,res)=>{
