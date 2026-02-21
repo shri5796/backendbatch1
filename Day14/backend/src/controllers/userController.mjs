@@ -58,7 +58,7 @@ const login=async (req,res)=>{
             return res.status(500).send({ message: "failed", error: "Internal Server Error" });
         }
         res.setHeader("Authorization", `Bearer ${token}`);
-        return res.status(200).send({ message: "success", data: user});
+        return res.status(200).send({ message: "success", data: user, token });
     } catch (error) {
         return res.status(500).send({ message: "failed", error: "Internal Server Error" });
     }
